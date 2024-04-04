@@ -1,0 +1,44 @@
+# 依存関係
+/node_modules
+
+# コンパイルされたファイル
+/dist
+/build
+
+# TypeScript v2以降のコンパイル出力
+*.tsbuildinfo
+
+# デバッグファイル
+*.log
+*.log.*
+
+# エディタの設定
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS生成ファイル
+.DS_Store
+Thumbs.db
+
+# 環境設定ファイル
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ビルド出力
+/out
+
+# 他のコンパイル/バンドル出力
+/.pnp
+.pnp.js
+/public
+
+# Storybook ビルド出力
+/storybook-static
+
+# キャッシュ
+.cache/
