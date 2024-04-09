@@ -16,8 +16,14 @@ public class BreweryResource {
     BreweryQueryResolver queryResolver;
 
     @Query
-    @Description("蔵元")
+    @Description("蔵元一覧")
     public List<Brewery> breweries() {
         return queryResolver.breweries();
+    }
+
+    @Query
+    @Description("蔵元")
+    public Brewery brewery(String id) {
+        return queryResolver.brewery(id);
     }
 }

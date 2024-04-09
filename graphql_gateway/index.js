@@ -16,6 +16,10 @@ const gateway = new ApolloGateway({
                 name: 'brewery',
                 url: 'http://localhost:8080/graphql',
             },
+            {
+                name: 'brand',
+                url: 'http://localhost:9090/graphql',
+            }
         ],
     })
 });
