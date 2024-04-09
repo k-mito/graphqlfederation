@@ -25,4 +25,11 @@ public class BrandQueryResolver {
     public Brewery brewery(String breweryId) {
         return new Brewery(breweryId);
     }
+
+    public Brand brand(String brandId) {
+        return brands.stream()
+                .filter(brand -> brand.brandId().equals(brandId))
+                .findFirst()
+                .orElse(null);
+    }
 }

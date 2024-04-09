@@ -5,9 +5,10 @@ import org.eclipse.microprofile.graphql.Id;
 
 
 
-@Key(fields = "id")
+@Key(fields = "breweryId")
 public record Brewery(
-        @Id String id,
-        String name
+        @Id String breweryId,
+        String name,
+        String address
 ) {
 }

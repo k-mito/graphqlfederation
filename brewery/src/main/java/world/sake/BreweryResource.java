@@ -4,7 +4,9 @@ import jakarta.inject.Inject;
 import org.eclipse.microprofile.graphql.Description;
 import org.eclipse.microprofile.graphql.GraphQLApi;
 import org.eclipse.microprofile.graphql.Query;
+import org.eclipse.microprofile.graphql.Source;
 import world.sake.resolver.BreweryQueryResolver;
+import world.sake.schema.Brand;
 import world.sake.schema.Brewery;
 
 import java.util.List;
@@ -23,7 +25,11 @@ public class BreweryResource {
 
     @Query
     @Description("蔵元")
-    public Brewery brewery(String id) {
-        return queryResolver.brewery(id);
+    public Brewery brewery(String breweryId) {
+        return queryResolver.brewery(breweryId);
+    }
+
+    public List<Brand> brands(@Source Brewery brewery) {
+        return queryResolver.brands(brewery);
     }
 }

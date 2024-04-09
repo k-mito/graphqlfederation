@@ -26,4 +26,9 @@ public class BrandResource {
     public Brewery brewery(@Source Brand brand) {
         return queryResolver.brewery(brand.breweryId());
     }
+
+    @Query
+    public Brand brand(String brandId) {
+        return queryResolver.brand(brandId);
+    }
 }
